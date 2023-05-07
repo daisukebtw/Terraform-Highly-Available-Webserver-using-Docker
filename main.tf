@@ -1,3 +1,19 @@
+#----------------------------------------------------------
+# Provision Highly Available Webserver launched on Docker Container
+#   - Zero DownTime
+#   - Green/Blue Deployment
+#
+# Create: 
+#    - Security Group for Web Server
+#    - Launch Configuration with Auto AMI Lookup
+#    - Auto Scaling Group using 2 Availability Zones
+#    - Elastic Load Balancer in 2 Availability Zones
+#    - Docker Image creating and building
+#    - Docker Container launching
+#
+# Made by Vitali Aleksandrov 07-May-2023
+#-----------------------------------------------------------
+
 provider "aws" {
   region = var.region
 }
